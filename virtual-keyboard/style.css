@@ -1,0 +1,159 @@
+@font-face {
+  font-family: AlegreyaSans-Regular;
+  src: url(./fonts/AlegreyaSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: AmaticSC-Regular;
+  src: url(./fonts/AmaticSC-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  /* font-family: "Lato", sans-serif; */
+  transition: 0.2s;
+  overflow: hidden;
+  background-color: #a7e1f3;
+}
+
+.container {
+  margin: 40px auto;
+  max-width: 708px;
+}
+
+.text {
+  max-width: 700px;
+  min-width: 700px;
+  max-height: 300px;
+  min-height: 300px;
+  width: 100%;
+  height: 120px;
+  border: 2px solid black;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+  font-size: 32px;
+  background-color: #e5f3ff;
+  padding-left: 15px;
+  font-family: AmaticSC-Regular;
+  font-weight: 500;
+}
+
+.keyboard {
+  /* bottom: 20%; */
+  /* top: 50%; */
+  display: inline-block; /* центрировать..*/
+  vertical-align: middle; /* ..по вертикали */
+  position: relative;
+  /* border: 2px solid rgb(0, 0, 0); */
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #b5bffbf7;
+}
+
+.line::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.key {
+  float: left;
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid black; */
+  border-radius: 4px;
+  margin: 3px;
+  padding: 4px;
+  text-align: center;
+  line-height: 32px;
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  font-family: AlegreyaSans-Regular;
+  font-weight: 600;
+  user-select: none;
+}
+.key.active {
+  background-color: #93faff;
+  color: white;
+}
+.key.remove {
+  animation: key_animation 0.6s forwards;
+}
+
+@keyframes key_animation {
+  0% {
+    background-color: #93faff;
+    color: white;
+  }
+  100% {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+.backspace {
+  width: auto;
+  font-size: 12px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+}
+
+.space {
+  bottom: 0;
+}
+
+.tab {
+  width: 49px;
+}
+
+.del {
+  width: 77px;
+}
+
+.caps-lock {
+  width: 95px;
+  font-size: 14px;
+}
+
+.enter {
+  width: 77px;
+}
+
+.shift {
+  width: 95px;
+}
+
+.shift2 {
+  width: 77px;
+}
+
+.ctrl {
+  width: 50px;
+}
+
+.win {
+  width: 50px;
+}
+.lalt, .ralt {
+  width: 50px;
+}
+.spacebar {
+  width: 286px;
+}
+.rctrl {
+  width: 30px;
+}
+.ctrl_text {
+  position: relative;
+  left: -3px;
+}
